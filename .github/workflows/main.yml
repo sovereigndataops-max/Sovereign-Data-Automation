@@ -1,12 +1,19 @@
 name: Build App
+
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ANDROID_ACCEPT_LICENSE: "True"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.11
-      - run: pip install buildozer
+          python-version: '3.11'
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+      - run: pip install --upgrade pip buildozer cython
       - run: buildozer android debug
