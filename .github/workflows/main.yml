@@ -1,0 +1,13 @@
+name:Build App
+on: [push]
+jobs:    
+  build:
+    run-on: ubuntu-lastest
+    steps:
+  - uses: actions/checkout@v4
+  - uses: actions/setup-python@v5
+   with:
+     python-verison: 3.11 
+- run: pip install buildozer
+-run: buildozer android debug
+     
