@@ -3,7 +3,7 @@ on: [push]
 jobs:    
   build:
     runs-on: ubuntu-latest
-   S steps:
+    steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
       with:
