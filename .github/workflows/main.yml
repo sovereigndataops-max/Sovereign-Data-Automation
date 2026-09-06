@@ -21,8 +21,8 @@ jobs:
   
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
-- name: Install required build tools
-  run: |
+      - name: Install required build tools
+        run: |
     sdkmanager "build-tools;33.0.2" "platforms;android-33"
       - name: Install Python deps
         run: |
