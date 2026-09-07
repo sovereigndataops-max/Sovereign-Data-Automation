@@ -36,7 +36,6 @@ jobs:
         run: |
           export PATH=$PATH:~/.local/bin
           cd ScamShieldMobile
-          buildozer android clean
           buildozer -v android debug
 
       - name: Upload APK Artifact
