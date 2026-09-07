@@ -1,4 +1,3 @@
-
 name: Build Android APK
 
 on:
@@ -37,6 +36,11 @@ jobs:
         run: |
           export PATH=$PATH:~/.local/bin
           cd ScamShieldMobile
+          
+          # Force clean old broken caches so it reads the new spec file fresh
+          buildozer android clean
+          
+          # Run the actual build
           buildozer -v android debug
 
       - name: Upload APK Artifact
@@ -44,6 +48,8 @@ jobs:
         with:
           name: package
           path: ScamShieldMobile/bin/*.apk
+
+
 
 
 
