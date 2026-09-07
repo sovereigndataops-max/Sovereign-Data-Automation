@@ -1,3 +1,4 @@
+
 name: Build Android APK
 
 on:
@@ -27,15 +28,6 @@ jobs:
           sudo apt-get install -y git zip unzip python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
           pip3 install --user --upgrade buildozer cython virtualenv
 
-      - name: Force Accept Android Licenses
-        run: |
-          # Download basic android command line tools to force-sign licenses cleanly
-          mkdir -p cmdline-tools
-          curl -s https://google.com -o tools.zip
-          unzip -q tools.zip -d cmdline-tools
-          # Agree to all terms automatically via standard input pipe
-          yes | ./cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME/.buildozer/android/platform/android-sdk --licenses || true
-
       - name: Build APK with Buildozer
         env:
           APP_ANDROID_ACCEPT_SDK_LICENSE: "1"
@@ -43,6 +35,11 @@ jobs:
         run: |
           export PATH=$PATH:~/.local/bin
           cd ScamShieldMobile
+          
+          # Automatically accept licenses using buildozer's official command
+          yes | buildozer android licenses || true
+          
+          # Run the actual build
           buildozer -v android debug
 
       - name: Upload APK Artifact
@@ -50,7 +47,6 @@ jobs:
         with:
           name: package
           path: ScamShieldMobile/bin/*.apk
-
 
 
        
