@@ -28,7 +28,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y git zip unzip python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
-          pip3 install --user --upgrade buildozer cython virtualenv
+          pip3 install --user --upgrade buildozer cython virtualenv setuptools
 
       - name: Build APK with Buildozer
         env:
@@ -36,11 +36,7 @@ jobs:
         run: |
           export PATH=$PATH:~/.local/bin
           cd ScamShieldMobile
-          
-          # Force clean old broken caches so it reads the new spec file fresh
           buildozer android clean
-          
-          # Run the actual build
           buildozer -v android debug
 
       - name: Upload APK Artifact
@@ -49,8 +45,3 @@ jobs:
           name: package
           path: ScamShieldMobile/bin/*.apk
 
-
-
-
-
-       
