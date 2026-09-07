@@ -1,16 +1,9 @@
-[app]
-title = ScamShield Mobile
-package.name = scamshieldmobile
-package.domain = org.scamshield
-source.include_exts = py,png,jpg,kv
-version = 0.1
+from kivy.app import App
+from kivy.uix.label import Label
 
-requirements = python3,kivy,plyer,requests
+class ScamShieldApp(App):
+    def build(self):
+        return Label(text="ScamShield Mobile is running")
 
-orientation = portrait
-
-android.api = 31
-android.minapi = 21
-android.archs = arm64-v8a
-
-fullscreen = 0
+if __name__ == "__main__":
+    ScamShieldApp().run()
