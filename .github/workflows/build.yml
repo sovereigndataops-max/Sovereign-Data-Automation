@@ -22,6 +22,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Correctly Set Up Android SDK & Accept Licenses
+        uses: android-actions/setup-android@v3
+
       - name: Install System Dependencies
         run: |
           sudo apt-get update
@@ -30,16 +33,10 @@ jobs:
 
       - name: Build APK with Buildozer
         env:
-          APP_ANDROID_ACCEPT_SDK_LICENSE: "1"
           BUILDOZER_WARN_ON_ROOT: "0"
         run: |
           export PATH=$PATH:~/.local/bin
           cd ScamShieldMobile
-          
-          # Automatically accept licenses using buildozer's official command
-          yes | buildozer android licenses || true
-          
-          # Run the actual build
           buildozer -v android debug
 
       - name: Upload APK Artifact
@@ -47,6 +44,7 @@ jobs:
         with:
           name: package
           path: ScamShieldMobile/bin/*.apk
+
 
 
        
