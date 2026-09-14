@@ -1,4 +1,12 @@
-# Sovereign Data Automation 🚀
+# 🚀 Sovereign Data Automation | Custom Automated Pipelines
+
+I build enterprise-grade Python automation scripts, multi-node data extraction web scrapers, and high-purity database validation engines on a strict, text-and-ticket asynchronous basis. 
+
+### 💼 Skip the Discovery Calls. Deploy My Automation Scripts Instantly:
+* 🟢 **Fiverr Storefront:***  [Order Custom Python Scripts & Automation Pipelines]
+* 📦 **Gumroad Project Vault:*** [Download Pre-Cleansed B2B Data Packages & Executables]
+* 💳 **Payhip Settlement Vault:***  [Access Advanced Data Engineering Frameworks]
+
 
 ## Technical Overview
 Enterprise-grade Python scripts and pandas data pipelines built to fully automate chaotic corporate datasets, eliminate pipeline logging lag, and purify spreadsheet manifests down to the exact decimal point in seconds.
