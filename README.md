@@ -4,7 +4,6 @@ I build enterprise-grade Python automation scripts, multi-node data extraction w
 
 ### 💼 Skip the Discovery Calls. Deploy My Automation Scripts Instantly:
 * 🟢 **Fiverr Storefront:***  [Order Custom Python Scripts & Automation Pipelines]
-* 📦 **Gumroad Project Vault:*** [Download Pre-Cleansed B2B Data Packages & Executables]
 * 💳 **Payhip Settlement Vault:***  [Access Advanced Data Engineering Frameworks]
 
 
