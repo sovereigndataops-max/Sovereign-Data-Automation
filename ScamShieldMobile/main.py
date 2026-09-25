@@ -1,7 +1,4 @@
 
-TINA KIM
-10:06 PM (2 minutes ago)
-to me
 
 import re
 from kivy.app import App
