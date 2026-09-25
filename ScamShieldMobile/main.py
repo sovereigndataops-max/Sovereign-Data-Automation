@@ -99,8 +99,8 @@ def analyze_text(self, instance):
         self.result_label.text = "🚨 SCAM DETECTED: " + ", ".join(hits)
     else:
         self.result_label.text = "✅ SAFE: No obvious scam parameters detected."
-See more
-if name == 'main':
+
+if __name__ == '__main__':
     ScamShieldApp().run()
 
 
