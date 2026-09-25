@@ -1,14 +1,12 @@
-
-
 import re
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
-(pattern, label shown when matched)
-\b word boundaries on short terms so innocent words
-like "love", "very" or "farm" are never flagged.
+#(pattern, label shown when matched)
+#\b word boundaries on short terms so innocent words
+#like "love", "very" or "farm" are never flagged.
 SCAM_PATTERNS = [
     (r'https?://[^\s]+', 'suspicious link'),
     (r'telegram\.me', 'telegram link'),
