@@ -1,0 +1,5 @@
+assistant.db
+assistant.db-*
+backup/
+__pycache__/
+*.pyc
