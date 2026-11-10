@@ -1,7 +1,7 @@
 """Personal Assistant v0.1: offline project memory for Python + SQLite.
 
 Phone-friendly command menu. No AI, API, cloud, automation, or third-party packages.
-Run: python assistant.py
+Run: python Assistant.py
 Database and backups stay beside this script. Do NOT mix databases from other drafts.
 """
 
