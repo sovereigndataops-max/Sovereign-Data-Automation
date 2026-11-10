@@ -1,0 +1,13 @@
+PERSONAL ASSISTANT v0.1 — PYTHON EDITION
+
+Requires Python 3.11 or newer. No additional Python packages are needed.
+
+1. Extract the ZIP to a writable folder.
+2. Open a terminal in that folder.
+3. Run: python Assistant.py (Windows), or python3 Assistant.py (macOS/Linux).
+4. Select menu items by typing their number. Choose 0 to exit.
+5. Your data is stored in assistant.db beside Assistant.py.
+6. Select menu option 9 to create a verified database backup in the backup folder.
+7. Keep the database and backups private; copy backups to another drive periodically.
+
+This is an offline command-line application, not a graphical desktop interface.

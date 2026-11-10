@@ -1,0 +1,12 @@
+PERSONAL ASSISTANT v0.1 — WINDOWS EDITION
+
+1. Extract the ZIP to a writable folder such as Documents\PersonalAssistant.
+2. Open PersonalAssistant.exe to start the numbered text menu.
+3. Select menu items by typing their number. Choose 0 to exit.
+4. Your projects, notes, tasks, and decisions are stored in assistant.db beside the executable.
+5. Select menu option 9 to create a verified database backup in the backup folder.
+6. Keep assistant.db and the backup folder private. Copy backups to another drive periodically.
+
+This is an offline, text-menu application, not a graphical desktop interface.
+Windows may warn about unsigned executables. The application does not require an internet connection or an account.
+Do not run the executable from inside the ZIP archive.
