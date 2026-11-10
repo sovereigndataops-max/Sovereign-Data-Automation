@@ -18,5 +18,5 @@ jobs:
       - name: Check Python syntax
         run: python -m py_compile Assistant.py
       - name: Test Assistant Startup
-        run: printf '1\nTest Project\nTesting memory\n7\nTest Project\n0\n'' | python  Assistant.py
+        run: printf '1\nTest Project\nTesting memory\n7\nTest Project\n0\n' | python  Assistant.py
 
