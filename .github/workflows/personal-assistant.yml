@@ -36,5 +36,5 @@ jobs:
         run: |
           printf '9\n0\n' | python Assistant.py
           python -c "import sqlite3,glob; p=glob.glob('backup/*.db'); assert p, 'Backup missing'; c=sqlite3.connect(p[-1]); assert c.execute('PRAGMA integrity_check').fetchone()[0]=='ok'; assert c.execute('SELECT COUNT(*) FROM projects').fetchone()[0]>0; print('BACKUP VERIFIED')"
-       -
+       
        
