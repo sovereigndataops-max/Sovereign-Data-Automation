@@ -22,8 +22,8 @@ jobs:
         run: python -m py_compile Assistant.py
       - name: Test Assistant Startup
         run: printf '1\nTest Project\nTesting memeory\n7\nTest Project\n0\n' | python Assistant.py
-       - name: Restart and check saved memory
-          run; printf '7\nTest Project\n0\n' | python Assistant.py
+      - name: Restart and check saved memory
+        run: printf '7\nTest Project\n0\n' | python Assistant.py
         
       - name: Test Assistant Startup
         run: printf '1\nTest Project\nTesting memory\n8\n0\n' | python  Assistant.py
